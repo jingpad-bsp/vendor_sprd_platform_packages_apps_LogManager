@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="btn_text_color">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="orange">#FFA500</color>
+    <color name="gray">#ff888888</color>
+    <color name="darkgray">#ff444444</color>
+    <color name="lightgray">#ffcccccc</color>
+    <color name="title_color">#009688</color>
+    <color name="progress_back">#AEAEAE</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="main_top_color">#f7614d</color>
+    <color name="main_top_tab_color">#fcc9c5</color>
+    <color name="main_top_tab_color_2">#ffffff</color>
+    <color name="matrix_color">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#FFFF1826</color>
+    <color name="slogui_settings_collection_text_color">#ff797979</color>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/launcherdebug">
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="launcher_all_log"
+        android:title="All Log"
+        android:disableDependentsState="true">
+    </com.sprd.engineermode.EMSwitchPreference>
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="launcher_resumetime_log"
+        android:title="ResumeTime Log"
+        android:dependency="launcher_all_log">
+    </com.sprd.engineermode.EMSwitchPreference>
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="launcher_loader_log"
+        android:title="Loader Log"
+        android:dependency="launcher_all_log">
+    </com.sprd.engineermode.EMSwitchPreference>
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="launcher_dump_log"
+        android:title="Dump Log"
+        android:dependency="launcher_all_log">
+    </com.sprd.engineermode.EMSwitchPreference>
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="launcher_widget_log"
+        android:title="Widget Log"
+        android:dependency="launcher_all_log">
+    </com.sprd.engineermode.EMSwitchPreference>
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="launcher_unread_log"
+        android:title="Unread Log"
+        android:dependency="launcher_all_log">
+    </com.sprd.engineermode.EMSwitchPreference>
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="launcher_dynamicicon_log"
+        android:title="Dynamicicon Log"
+        android:dependency="launcher_all_log">
+    </com.sprd.engineermode.EMSwitchPreference>
+</PreferenceScreen>

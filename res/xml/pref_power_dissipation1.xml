@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/powerdissipation"
+    android:key="powerDissipation">
+
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="dvfs"
+        android:title="DVFS" >
+    </com.sprd.engineermode.EMSwitchPreference>
+
+    <!-- SPRD Bug:847281:Power Dissipation setting - CPU Fre can not set. @{ -->
+    <com.sprd.engineermode.EMSwitchPreference
+        android:key="cpuFrequenceSwitch"
+        android:title="CPU FRE SWITCH" >
+    </com.sprd.engineermode.EMSwitchPreference>
+    <!-- @} -->
+    <Preference
+        android:dialogTitle="CPU Fre（400～1400mHz）"
+        android:key="cpuFrequence"
+        android:summary="mHz"
+        android:title="CPU Fre" >
+    </Preference>
+    <Preference
+        android:title="@string/maxcpufrq"
+        android:key="cpu_frq_max">
+        <intent
+        android:action="android.intent.action.MAIN"
+        android:targetClass="com.sprd.engineermode.debuglog.MaxCpuFrqActivity"
+        android:targetPackage="com.sprd.engineermode" />
+    </Preference>
+</PreferenceScreen>

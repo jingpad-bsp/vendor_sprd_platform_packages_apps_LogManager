@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:preference="http://schemas.android.com/apk/res/com.sprd.logmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/setting_title"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/slogui_ab_background_overlay"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/ylog_debug_setting_tools"
+            android:textColor="@color/black"
+            android:textSize="16sp" >
+        </TextView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/ap_cap_log_packet_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:summaryVisibility="visiable"
+            preference:title="@string/ap_cap_log_packet_length" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/modem_cap_log_packet_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:summaryVisibility="visiable"
+            preference:title="@string/modem_cap_log_packet_length" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/audio_log_max_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:summary="@string/audio_log_max_size_tips"
+            preference:summaryVisibility="visiable"
+            preference:title="@string/audio_log_max_size" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/sensor_hub_max_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:summary="@string/sensor_hub_max_size_tips"
+            preference:summaryVisibility="visiable"
+            preference:title="@string/sensor_hub_max_size" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/other_total_max_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/other_total_max_size" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/other_log_override"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:checkVisibility="visiable"
+            preference:title="@string/log_override" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+</ScrollView>

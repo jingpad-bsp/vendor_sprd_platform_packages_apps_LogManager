@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.sprd.logmanager"
+    android:versionCode="1"
+    android:targetSdkVersion="28"
+    android:versionName="1.0" >
+
+    <!--    android:sharedUserId="android.uid.system"-->
+
+    <protected-broadcast android:name="com.sprd.engineermode.MODEM_ASSERT_DUMP" />
+    <application android:label="@string/app_name"
+                 android:resizeableActivity="false"
+                 android:name="com.sprd.logmanager.LogManagerApplication"
+                 android:icon="@mipmap/ic_launcher"
+                 tools:replace="android:appComponentFactory"
+                 android:appComponentFactory="logmanager"
+                 android:allowBackup="false">
+
+
+        <activity
+                android:name="com.sprd.logmanager.logui.LogMainActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppCompat" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.sprd.logmanager.logui.UserDefinedActivity"
+                android:label="userdefined"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+ 
+        <activity
+            android:name="com.sprd.logmanager.logui.SceneSettingActivity"
+            android:screenOrientation="portrait"
+            android:excludeFromRecents="true"
+            android:theme="@style/AppCompat"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.sprd.logmanager.logui.DebugSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompat"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.sprd.logmanager.logui.LogSettingItemListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompat"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.sprd.logmanager.logui.LogSettingDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompat"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.sprd.logmanager.logui.WCDMAIQActivity"
+            android:label="WCDMA IQ"
+            android:screenOrientation="portrait"
+            android:theme="@style/EngAppActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sprd.logmanager.logui.GSMIQActivity"
+            android:label="GSM IQ"
+            android:screenOrientation="portrait"
+            android:theme="@style/EngAppActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+            </intent-filter>
+        </activity>
+        <provider android:name="com.sprd.logmanager.database.LogSceneProvider"
+                  android:exported="true"
+                  android:authorities="com.sprd.logmanager.provider.LogSceneProvider"
+                  tools:ignore="ExportedContentProvider"/>
+    </application>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REBOOT"
+                     tools:ignore="ProtectedPermissions"/>
+</manifest>

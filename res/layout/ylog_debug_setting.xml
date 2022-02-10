@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:preference="http://schemas.android.com/apk/res/com.sprd.logmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/slogui_ab_background_overlay"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/ylog_debug_setting_tools"
+            android:textColor="@color/black"
+            android:textSize="16sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:textColor="@color/title_color"
+            android:textStyle="bold"
+            android:text="@string/ylog_debug_setting"
+            android:textSize="12sp" >
+        </TextView>
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/move_data"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/move_data" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/storage_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/storage_path" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:textColor="@color/title_color"
+            android:textStyle="bold"
+            android:text="@string/ylog_debug_tools"
+            android:textSize="12sp" >
+        </TextView>
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/modem_assert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/modem_assert" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/sp_assert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/sp_assert" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/cp2_assert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/cp2_assert" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/dump_wcn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/dump_wcn" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/dump_gnss"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            preference:title="@string/dump_gnss" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/dump_art"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            preference:checkVisibility="visiable"
+            android:visibility="invisible"
+            preference:title="@string/dump_art" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:visibility="invisible"
+            android:background="@color/gray" />
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/save_sleep_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/save_sleep_log" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/modem_to_pc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:checkVisibility="visiable"
+            preference:title="@string/modem_to_pc" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/wcn_to_pc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:checkVisibility="visiable"
+            preference:title="@string/wcn_to_pc" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+	    android:visibility="gone"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:textColor="@color/title_color"
+            android:textStyle="bold"
+            android:text="@string/ylog_debug_collect"
+            android:textSize="12sp" >
+        </TextView>
+
+        <com.sprd.logmanager.logui.SettingPreferenceView
+            android:id="@+id/pac_log"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            preference:title="@string/pac_log" >
+        </com.sprd.logmanager.logui.SettingPreferenceView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+</ScrollView>

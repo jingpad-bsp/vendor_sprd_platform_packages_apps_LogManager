@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+     <SwitchPreference
+        android:key="cpc"
+        android:title="@string/ue_cap_cpc" >
+     </SwitchPreference>
+     <SwitchPreference
+        android:key="ul_16qam"
+        android:title="@string/ue_cap_ul_16qam" >
+     </SwitchPreference>
+     <SwitchPreference
+        android:key="dbhsdpa"
+        android:title="@string/ue_cap_db_hsdpa" >
+     </SwitchPreference>
+     <SwitchPreference
+        android:key="dchsdpa"
+        android:title="@string/ue_cap_dchsdpa" >
+     </SwitchPreference>
+     <!--<SwitchPreference
+        android:key="improved_l2_ul"
+        android:title="@string/ue_cap_improved_l2_ul" >
+     </SwitchPreference>-->
+     <SwitchPreference
+        android:key="efach"
+        android:title="@string/ue_cap_efach" >
+     </SwitchPreference>
+     <!--<SwitchPreference
+        android:key="edrx"
+        android:title="@string/ue_cap_edrx" >
+     </SwitchPreference>-->
+     <SwitchPreference
+        android:key="erach"
+        android:title="@string/ue_cap_erach" >
+     </SwitchPreference>
+     <SwitchPreference
+        android:key="snow3g"
+        android:title="@string/ue_cap_snow3g" >
+     </SwitchPreference>
+     <SwitchPreference
+        android:key="w_diversity"
+        android:title="@string/ue_cap_w_diversity" >
+     </SwitchPreference>
+     <SwitchPreference
+        android:key="type3i"
+        android:title="@string/ue_cap_type3i" >
+     </SwitchPreference>
+     <!--<SwitchPreference
+        android:key="fast_dormancy"
+        android:title="@string/ue_cap_fast_dormancy" >
+     </SwitchPreference>  -->
+     <!--<SwitchPreference
+        android:key="cbs"
+        android:title="@string/ue_cap_cbs" >
+     </SwitchPreference>-->
+     <SwitchPreference
+        android:key="hsdpa"
+        android:title="@string/ue_cap_hsdpa" >
+     </SwitchPreference>
+     <SwitchPreference
+        android:key="hsupa"
+        android:title="@string/ue_cap_hsupa" >
+     </SwitchPreference>
+</PreferenceScreen>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+     <Preference
+        android:key="ue_cap"
+        android:title="@string/ue_cap" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.sprd.engineermode.telephony.UeCapActivity"
+            android:targetPackage="com.sprd.engineermode" />
+     </Preference>
+     <Preference
+        android:key="nw_cap"
+        android:title="@string/nw_cap" >
+     </Preference>
+</PreferenceScreen>

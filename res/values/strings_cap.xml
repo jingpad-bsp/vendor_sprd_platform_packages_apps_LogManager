@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2007, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- SPRD 815541 : Coulometer Power Test Mode -->
+    <string name="coulometer_power">Coulometer Power Test</string>
+    <string name="coulometer_time_quantum1">Time slot 1</string>
+    <string name="coulometer_time_quantum2">Time slot 2</string>
+    <string name="coulometer_time_quantum3">Time slot 3</string>
+    <string name="coulometer_time_begin">Start time: </string>
+    <string name="coulometer_time_finish">End time: </string>
+    <string name="coulometer_time_end">Test duration(hour): </string>
+    <string name="coulometer_start">START</string>
+    <string name="coulometer_finish">END</string>
+    <string name="coulometer_result">RESULT</string>
+    <string name="coulometer_clean">CLEAR</string>
+    <string name="coulometer_year">Y</string>
+    <string name="coulometer_month">M</string>
+    <string name="coulometer_day">D</string>
+    <string name="coulometer_hour">H</string>
+    <string name="coulometer_minute">Min</string>
+    <string name="year_format_err">The format of year is error</string>
+    <string name="month_format_err">The format of month is error</string>
+    <string name="day_format_err">The format of day is error</string>
+    <string name="hour_format_err">The format of hour is error</string>
+    <string name="minute_format_err">The format of minute is error</string>
+    <string name="during_empty_err">Test duration can not null</string>
+    <string name="cc_test_chart">Coulometer Power Test curve</string>
+    <string name="notice_test_stop">Testing，are you sure to stop？</string>
+    <string name="notice_data_empty">There are no test datas</string>
+    <string name="coulometer_testing">Testing ...</string>
+    <string name="coulometer_test_stop">Test end</string>
+    <string name="coulometer_not_test">waiting ...</string>
+    <string name="coulometer_notice">show curve</string>
+    <string name="function_introduction">Function instruction</string>
+    <string name="start_time_error">Start time is less than current system time, please modify start time</string>
+    <string name="end_time_error">End time is less than start time, please modify end time</string>
+    <string name="duration_introduce">(Exactly to a decimal point)</string>
+    <string name="less_than_twinty_toast">If test duration is less than 20 minutes, can not show the curve</string>
+    <string name="notice_testing_show">Testing，there are no test datas or not fully</string>
+
+    <string name="coulometer_power_introduction">Coulometer Power Test(2018-02-09)\n\nDemand purpose:Users can see the approximate power consumption of a scene when using a mobile phone\n\n*******************************\n\nImplementation Method ：\n\n1)When pressing START button, echo 1 > /sys/class/power_supply/sprdfgu/cc_test_cmd. \n\n2)When pressing END button, echo 0 > /sys/class/power_supply/sprdfgu/cc_test_cmd.\nRead the datas from cat /sys/class/power_supply/sprdfgu/cc_test_result. \n\n*******************************\n\nUI design:\n\n  The data are recorded every 10 minutes. After the end, all data stored in every 10 minutes are plotted with a simple curve through the value of "vertical axis time" and "vertical axis power consumption". \n  Test long standby power, such as 24, 48 hours, can collect data every one or two hours, and then draw it for one point with each data.\n  If the test time of the simple scene is less than 20 minutes, there is no need to draw a curve.\n\n  There can not overlapping part of the test time for each time period. </string>
+    <string name="camera_fps">Camera FPS</string>
+    <string name="set_max">Set Max</string>
+    <string name="set_min">Set Min</string>
+    <string name="range">5~30</string>
+    <string name="camera_fps_introduction">Camera FPS(2018-03-01)\n\nDemand purpose:\n\nEasy adjustment of taking video \ preview frame rate and indirect debugging of camera power \n\n*******************************\n\nFunction description:\n    Take video / preview frame indirect adjustment. Add a fixed frame rate function in the EngineerMode. Take video and preview can input the max and Minimum frame that you want.\n\n*******************************\n\nImplementation Method：\n\n1)Preview frame rate settings ：\n    setprop persist.sys.camera.preview.fps abcd   //Setting the preview frame rate from cd to ab\n\n2)Video frame rate setting ：\n    setprop persist.sys.camera.record.fps abcd    //Setting the video frame rate from cd to ab\n\n3)Restore defaults\nAvoid the default value not restored after the tester is completed a functional switch. One button restores all of the above functions and switches to default values .\n\n   To set the frame rate to a certain value, the fixed video frame rate is 20fps as an example:\n    setprop persist.sys.camera.record.fps 2020，can not write as setprop persist.sys.camera.record.fps 20，The first two bits of the parameter string are maxfps, and the next two bits are minfps, which can not be missing .user version can use *#*#83781#*#* -> HARDWARETEST -> Camera FPS。\n\n*******************************\n\nUI design:\n\n  Camera  FPS have three functions：\n    1)Preview \n    2)Recording \n    3)Restore Defaults</string>
+    <string name="gro_introduction">SETH Network card GRO Converging function (2018-03-12)\n\nDemand purpose:\n\n    Make this function in EngineerMode, Convenient tester for manual opening test .\n\n*******************************\n\nFunction description:\n    SETH Network card GRO Converging function belong to AP side Network card downlink data message Converging function, can reduce the processing pressure of the kernel network subsystem, It also reduces the number of the uplink TCP ACK and reduces the MIPs overhead of CP .\n\n*******************************\n\nImplementation Method：\n\n1)Open GRO, setprop ctl.start gro_on\n\n2)Close GRO, setprop ctl.start gro_of\n\n3)Query :sys/module/seth/parameter/gro_enable value is 1 to open gro，value is 0 to close gro。\n\n*******************************\n\nAcceptance plan :\n\n  When downloading by FTP, Open GRO, capturing cap log of ap side , the downlink message will have the effect of gathering, and it can be judged from the length of the message, almost is bigger than 1500 bytes. close GRO, The downlink message length is about 1500 bytes</string>
+
+    <string name="ping_packages">Ping packages</string>
+    <string name="ping_ipv4">IPv4</string>
+    <string name="ping_ipv6">IPv6</string>
+    <string name="ping_address">Ping Address: </string>
+    <string name="ping_size">Ping Size(bytes): </string>
+    <string name="ping_size_hint">84</string>
+    <string name="ping_address_hint">www.baidu.com</string>
+    <string name="ping_count">Ping Count: </string>
+    <string name="ping_count_hint">4</string>
+    <string name="result_information">Command result:</string>
+    <string name="result_empty">Result empty</string>
+
+    <string name="ping_packages_introduction">Ping packages Test(2018-03-26)\n\nDemand purpose:\n\nIt is convenient for the IOT test to check whether the Ping packet chain is normal or not, and at present, the UE Ping server is carried out through the computer through the USB binding computer, which is not conducive to the operation of the testers. \n\n*******************************\n\nFunction description:\n\n    It can be operated by the UE Ping server through the EngineerMode. IP type selection, Ping packet time, Ping packet interval, and Ping packet size can be carried out .\n\n</string>
+
+    <!-- SPRD 838786 : PDN Test Mode add -->
+    <string name="pdn_test">PDN Test</string>
+    <string name="pdn_test_introduction">PDN Test(2018-03-26)\n\nDemand purpose:\n\nPDN is an essential operation in the IOT test, which is now set by the APK and AT commands, and the process is complex and is not conducive to the operation of the testers. \n\n*******************************\n\nFunction description:\n\n    UE Attach established the first road to build the default carrying capacity, It can build multiple PDN through EngineerMode, each PDN corresponding to different APN parameters, to set up special carrying capacity and special carrying capacity, special bearing will activate and default carrying capacity associated, and can be activated to default and special carrying capacity.\n\n</string>
+    <string name="dedicate_pdn">Dedicate Pdn Test</string>
+    <string name="at_cgd">AT CGDSCONT TEST</string>
+    <string name="at_cge">AT CGEQOS TEST</string>
+    <string name="at_cgt">AT CGTFT TEST</string>
+    <string name="at_cga">AT CGACT TEST</string>
+    <string name="cid">CID</string>
+    <string name="pid">PID</string>
+    <string name="actived">ACTIVATE</string>
+    <string name="state">STATE</string>
+    <string name="qci">QCI</string>
+    <string name="dl_gbr">DL_GBR</string>
+    <string name="ul_gbr">UL_GBR</string>
+    <string name="dl_mbr">DL_MBR</string>
+    <string name="ul_mbr">UL_MBR</string>
+    <string name="packet_filter_identifier">Pac Fil</string>
+    <string name="evaluation_precedence">Eva Pre</string>
+    <string name="source_address">Sou Addr</string>
+    <string name="protocol_number">Pro Num</string>
+    <string name="destination_port_range">Des Port</string>
+    <string name="source_port_range">Sou Port</string>
+    <string name="ipsec_security_parameter">Ips Sec</string>
+    <string name="type_of_service">Type Ser </string>
+    <string name="flow_label">Flow Lab</string>
+    <string name="iot_pdp">IOT PDP</string>
+    <string name="cga_hint_1">please input 0~1</string>
+    <string name="cga_hint_15">"please input 1~15</string>
+    <string name="cgd_hint_15">please input 1~15</string>
+    <string name="cge_hint_15">please input 1~9 or 128~254</string>
+    <string name="cgt_hint_11">please input 1~11</string>
+    <string name="cgt_hint_16">please input 1~16</string>
+    <string name="cgt_hint_255">please input 0~255</string>
+    <string name="cgt_hint_215">please input 0~16777215</string>
+    <string name="cgt_hint_295">please input 0~4294967295</string>
+
+    <!-- SPRD 838490 : adb shell window -->
+    <string name="adb_shell_hint">getprop</string>
+    <string name="adb_shell_cmd">adb shell </string>
+    <string name="adb_shell">adb shell </string>
+    <string name="adb_shell_introduction">adb shell Test(2018-03-26)\n\nDemand purpose:\n\n In order to facilitate the user to run the shell command directly on the phone, it provides the function of direct input to the shell command. \n\n*******************************\n\nFunction description:\n\n    The interface can directly enter the shell command that you want to run in the edit box. Click start to run the command, and the results will be outputed directly under the command box, which can run two shell at the same time.\n\n</string>
+    <!-- SPRD BUG 838388 - Frequency Point test -->
+    <string name="frequency_lte">LTE</string>
+    <string name="frequency_wcdma">WCDMA</string>
+    <string name="frequency_point">Frequency Point</string>
+    <string name="frequency_point_introduction">Frequency Point Test(2018-03-26)\n\nDemand purpose:\n\nFor convenience of outfield testing, we need to input required frequency point, one key start lock function. \n\n*******************************\n\nFunction description:\n\n    The method of locking LTE frequency point:\n\nAT+SFUN=5\nAT+SPCLEANINFO=4\nAT+SPFRQ=0,4,earfcn //lock frequency point，earfcn is the number of frequency point which need to input\n AT+SFUN=4 \n\nThe method of unlocking LTE frequency point:\n\nAT+SFUN=5\nAT+SPFRQ=1\nAT+SFUN=4\n\nThe method of locking WCDMA frequency point:\n\nat+spfrq=0,0,earfcn//lock frequency point，earfcn is the number of frequency point which need to input\n\n</string>
+</resources>
